@@ -65,7 +65,7 @@ jobs:
     - name: Load upstream version state
       run: |
         if [ -f versions/upstream.env ]; then
-          cat versions/upstream.env >> $GITHUB_ENV
+          grep -v '^#' versions/upstream.env | grep -v '^\s*$' >> $GITHUB_ENV
         fi
 
     - name: Build and push Docker image
