@@ -180,6 +180,8 @@ Configure the following environment variables in `docker-compose.yml`. Variables
 | `ENABLE_WECHAT_NIGHTLY_RESTART` | `false` | Whether to enable nightly auto-stop and auto-restart for WeChat |
 | `WECHAT_NIGHTLY_STOP_TIME` | `23:30` | Daily scheduled stop time for WeChat (HH:MM format) |
 | `WECHAT_NIGHTLY_START_TIME` | `01:30` | Daily scheduled restart time for WeChat (HH:MM format) |
+| `ENABLE_WECHAT_AUTO_LOGIN` | `true` | Whether to automatically detect and click the login button after WeChat starts/restarts |
+| `AUTO_LOGIN_DELAY` | `3` | Delay in seconds after WeChat launch to wait for UI rendering before login action |
 
 
 

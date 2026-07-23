@@ -182,6 +182,8 @@ docker run -it -p 3001:3001 -v ./config:/config --device /dev/dri:/dev/dri nickr
 | `ENABLE_WECHAT_NIGHTLY_RESTART` | `false` | 是否启用凌晨定时停止与自动重启微信 |
 | `WECHAT_NIGHTLY_STOP_TIME` | `23:30` | 每日自动关闭微信的时刻（HH:MM 格式） |
 | `WECHAT_NIGHTLY_START_TIME` | `01:30` | 每日自动重新启动微信的时刻（HH:MM 格式） |
+| `ENABLE_WECHAT_AUTO_LOGIN` | `true` | 是否在微信启动/重启后自动识别并点击登录按钮 |
+| `AUTO_LOGIN_DELAY` | `3` | 微信启动后等待 UI 渲染完成的秒数 |
 
 
 

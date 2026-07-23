@@ -61,5 +61,8 @@ while true; do
     echo "🚀 Nightly scheduled restart: starting WeChat..."
     if [ -f /usr/bin/wechat ]; then
         nohup /usr/bin/wechat > /dev/null 2>&1 &
+        if [ "${ENABLE_WECHAT_AUTO_LOGIN:-true}" = "true" ]; then
+            nohup /lsiopy/bin/python3 /scripts/wechat/wechat-auto-login.py >/dev/null 2>&1 &
+        fi
     fi
 done
